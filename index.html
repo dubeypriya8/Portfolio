@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Responsive Portfolio website</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="js/custom.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">PORTFO<span>LIO</span></div>
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Skills</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </div>
+        </nav>
+
+        <div class="text">
+            <p>Hello, I am</p>
+            <h1>Priya Pandey</h1>
+            <p>And I am a Web Developer</p>
+            <button class="c-btn">Hire me</button>
+        </div>
+        
+    </header>
+
+    <section id="about">
+        <div class="section-info">
+            <h1>About</h1>
+            <p>Who i am?</p>
+        </div>
+
+        <div class="about-row">
+            <div class="about-left-col">
+                <img src="image/photo.jpg">
+            </div>
+
+            <div class="about-right-col">
+                <p id="p-title">
+                    Helle, I'm Priya Pandey & I'm a <span>Web Developer.</span>
+                </p>
+                <p>Seeking an opportunity in the field of software engineering.
+                    Good knowledge of JAVA, Python, HTML, CSS, JavaScript, C++, C#. NET. Ability to implement a full software development life cycle (SDLC)
+                    and analyze the performance of programs to correct deficiencies.
+                </p>
+                <button class="c-btn">Download CV</button>
+            </div>
+        </div>
+    </section>
+    <a href="Priya (4)" Download>Download
+        <span></span></a>
+
+    <section id="skills">
+        <div class="section-info">
+            <h1>Skill's</h1>
+            <p>Who i am?</p>
+        </div>
+
+        <div class="skills-row">
+            <div class="skills-left-col">
+                <p>Seeking an opportunity in the field of software engineering.
+                    Good knowledge of JAVA, Python, Node JS, C++, C#. NET. Ability to implement a full software development life cycle (SDLC)
+                    and analyze the performance of programs to correct deficiencies.</p>
+
+                    <button class="c-btn">Read more</button>
+
+            </div>
+            <div class="skills-right-col">
+                <div class="progress-div">
+                    <p>
+                    <span>HTML</span><br>
+                    <progress value="80" max="100"></progress>
+                    <span>80%</span>
+                </p>
+                <p>
+                    <span>CSS</span><br>
+                    <progress value="80" max="100"></progress>
+                    <span>80%</span>
+                </p>
+                <p>
+                    <span>JavaScript</span><br>
+                    <progress value="70" max="100"></progress>
+                    <span>70%</span>
+                </p>
+                <p>
+                    <span>JAVA</span><br>
+                    <progress value="80" max="100"></progress>
+                    <span>80%</span>
+                </p>
+                <p>
+                    <span>Bootstrap</span><br>
+                    <progress value="70" max="100"></progress>
+                    <span>70%</span>
+                </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    
+        <section id="services">
+            <div class="section-info">
+                <h1>Services</h1>
+                <p>What We provide</p>
+            </div>
+            <div class="services-row">
+                <div class="services-box"data-tilt>
+                    <img src="Image/b2.png">
+                    <h2>Web Design</h2>
+                    <p>Seeking an opportunity in the field of software engineering.
+                        Good knowledge of JAVA, Python, html, css, JavaScript, C++, C#. NET. Ability to implement a full software development life cycle (SDLC)
+                        and analyze the performance of programs to correct deficiencies.</p>
+                </div>
+            </div>
+
+    </section>
+
+
+    <section id="contact">
+        <div class="section-info" style="color: white;">
+            <h1>Get in Touch</h1>
+            <p style="color: black;">We are available</p>
+        </div>
+
+        <div class="contact-row">
+            <div class="contact-left-col">
+                <img src="Image/b3.png">
+            </div>
+            <div class="contact-right-col">
+                <form>
+                    <h2>Connect with us</h2>
+                    <input type="text" name="" placeholder="Name">
+                    <input type="email" name="" placeholder="Email">
+                    <br>
+                    <textarea cols="30" rows="10" placeholder="Message"></textarea>
+                    <br>
+                    <button class="c-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+        
+    </section>
+
+    <section id="footer">
+        <h2>Developed by Priya Pandey</h2>
+        <img src="image/icon.png" width="100">
+    </section>
+
+<script src="js/jquery.ripples-min.js"></script>
+
+<script>
+    jQuery(document).ready(function(){
+        $('header').ripples({
+  dropRadius: 20,
+  perturbance: 0.03,
+});
+
+    });
+</script>
+
+<script src="js/tilt.jquery.min.js"></script>
+
+<script>
+    let button=document.querySelector("body a");
+    button.addEventListener("click",()=>{ 
+        const span = document.querySelector("a span");
+        button.style.paddingRight='10px';
+        span.style.visibility="visible";
+        setTimeout(()=>{
+        button.style.transition=".3s ease-in-out";
+        button.style.paddingRight="0px";
+    },3000);
+    })
+</script>
+    
+</body>
+</html>
